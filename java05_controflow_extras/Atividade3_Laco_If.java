@@ -8,9 +8,9 @@ public class Atividade3_Laco_If {
 		
 		Scanner lerScanner = new Scanner(System.in);
 		
-		String nome, resposta;
+		String nome;
 		int idade;
-		boolean sim = true;
+		boolean primDoacao;
 		
 		System.out.println("Digite o seu nome: ");
 		nome = lerScanner.nextLine();
@@ -19,15 +19,17 @@ public class Atividade3_Laco_If {
 		idade = lerScanner.nextInt();
 		
 		System.out.println("\nEsta é sua primeira vez doando sangue? ");
-		resposta = lerScanner.nextLine();
+		primDoacao = lerScanner.nextBoolean();
 		
-		if(idade>=18 && idade<=60 || idade>=18 && idade<=69 && true) {
-			System.out.println("\n"+nome+" você está apto para doar sangue!");
-		}else { 
-			System.out.printf("\n"+nome+" você não está apto para doar sangue!");
-
-		}
+		if(idade>=18 && idade<=69) {
+			if(idade>=60 && idade<=69 && primDoacao) {
+				System.out.println("\n"+nome+" você não está apto para doar sangue!");
+			}else {
+				System.out.println("\n"+nome+" você está apto para doar sangue!");
+			}
+		}else
+			System.out.println("\n"+nome+" você não está apto para doar sangue!");
 		
 	}
-	
 }
+
