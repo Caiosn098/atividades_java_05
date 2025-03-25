@@ -1,6 +1,5 @@
 package java09_collection_fila_pilha;
 
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -27,10 +26,8 @@ public class Atividade2_Pilha {
 				String livro = scanner.nextLine();
 				pilhaLivros.add(livro);
 				System.out.println("\nO livro '"+ livro +"' foi adicionado!\nPilha: ");
-				
-				Iterator<String> iPilha = pilhaLivros.iterator();
-				while(iPilha.hasNext()) {
-					System.out.println(iPilha.next());
+				for (String pilha:pilhaLivros) {
+					System.out.println(pilha);
 				}
 				break;
 
@@ -40,10 +37,8 @@ public class Atividade2_Pilha {
 					System.out.println("\nA pilha de livros está vazia!\n");
 				} else {
 					System.out.println("\nLista de livros na pilha: ");
-					
-					Iterator<String> iPilhaLivros = pilhaLivros.iterator();
-					while(iPilhaLivros.hasNext()) {
-						System.out.println(iPilhaLivros.next());
+					for (String pilha:pilhaLivros) {
+						System.out.println(pilha);
 					}
 
 				}
@@ -55,10 +50,8 @@ public class Atividade2_Pilha {
 					System.out.println("\nA pilha de livros está vazia!\n");
 				} else {
 					System.out.println("\nO livro '"+pilhaLivros.pop()+"' foi retirado da pilha!\nPilha: ");
-					
-					Iterator<String> iRestantes = pilhaLivros.iterator();
-					while (iRestantes.hasNext()) {
-						System.out.println(iRestantes.next());
+					for (String pilha:pilhaLivros) {
+						System.out.println(pilha);
 					}
 
 				}

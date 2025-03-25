@@ -1,6 +1,5 @@
 package java09_collection_fila_pilha;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -28,10 +27,8 @@ public class Atividade1_Fila {
 				String cliente = scanner.nextLine();
 				filaClientes.add(cliente);
 				System.out.println("\nCliente " + cliente + " adicionado!\nFila:");
-
-				Iterator<String> iFila = filaClientes.iterator();
-				while (iFila.hasNext()) {
-					System.out.println(iFila.next());
+				for (String fila:filaClientes) {
+					System.out.println(fila);
 				}
 				break;
 
@@ -41,10 +38,8 @@ public class Atividade1_Fila {
 					System.out.println("\nA fila está vazia!\n");
 				} else {
 					System.out.println("Lista de clientes na fila: ");
-
-					Iterator<String> iFilaClientes = filaClientes.iterator();
-					while (iFilaClientes.hasNext()) {
-						System.out.println(iFilaClientes.next());
+					for (String lista:filaClientes) {
+						System.out.println(lista);
 					}
 
 				}
@@ -56,15 +51,13 @@ public class Atividade1_Fila {
 					System.out.println("\nA fila está vazia!\n");
 				} else {
 					System.out.println("\nO(A) cliente " + filaClientes.poll() + " foi chamado(a)!\nFila: ");
-
-					Iterator<String> iRestantes = filaClientes.iterator();
-					while (iRestantes.hasNext()) {
-						System.out.println(iRestantes.next());
+					for (String restante:filaClientes) {
+						System.out.println(restante);
 					}
 
 				}
 				break;
-
+				
 			}
 			case 0: {
 				System.out.println("\nPrograma finalizado!\n");
